@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-TA-vfk">
+                                <rect key="frame" x="87" y="333" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aJh-TA-vfk" secondAttribute="height" multiplier="1:1" id="gJE-gs-rA0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykd-KF-ig7">
+                                <rect key="frame" x="189" y="655" width="36" height="30"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="drawButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uuc-oi-zq0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3K-jN-kb6">
+                                <rect key="frame" x="50" y="114" width="314" height="188"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aJh-TA-vfk" secondAttribute="trailing" constant="87" id="1Bo-OK-jjA"/>
+                            <constraint firstItem="F3K-jN-kb6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="Le6-rk-78c"/>
+                            <constraint firstItem="aJh-TA-vfk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="MCF-eU-Ekf"/>
+                            <constraint firstItem="aJh-TA-vfk" firstAttribute="top" secondItem="F3K-jN-kb6" secondAttribute="bottom" constant="31" id="MZa-Tl-mS3"/>
+                            <constraint firstItem="ykd-KF-ig7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="189" id="N8O-Zm-tWv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ykd-KF-ig7" secondAttribute="bottom" constant="177" id="Vx0-Lf-Zoq"/>
+                            <constraint firstItem="ykd-KF-ig7" firstAttribute="top" secondItem="aJh-TA-vfk" secondAttribute="bottom" constant="82" id="WQm-oF-sxC"/>
+                            <constraint firstItem="aJh-TA-vfk" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Zkk-ys-POl"/>
+                            <constraint firstItem="F3K-jN-kb6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="aVp-NA-YeH"/>
+                            <constraint firstItem="F3K-jN-kb6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pv1-ZP-6Os"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ykd-KF-ig7" secondAttribute="trailing" constant="189" id="rSc-C0-nhX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F3K-jN-kb6" secondAttribute="trailing" constant="50" id="trj-xG-v0r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="aJh-TA-vfk" id="vwI-cT-VPU"/>
+                        <outlet property="suitAndValueLabel" destination="F3K-jN-kb6" id="Rhx-w2-EzQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
